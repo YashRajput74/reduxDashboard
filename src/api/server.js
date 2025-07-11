@@ -30,14 +30,14 @@ createServer({
         server.create('project', { id: 'PRJ-005', name: 'Edward', dueDate: 'May 03, 2015', progress: 35 });
         server.create('project', { id: 'PRJ-006', name: 'Ronald', dueDate: 'May 05, 2015', progress: 70 });
 
-        server.create('sales', { month: 'January', China: 20, USA: 40, UK: 70 });
-        server.create('sales', { month: 'February', China: 40, USA: 30, UK: 10 });
-        server.create('sales', { month: 'March', China: 15, USA: 20, UK: 30 });
-        server.create('sales', { month: 'April', China: 35, USA: 10, UK: 40 });
-        server.create('sales', { month: 'May', China: 25, USA: 50, UK: 25 });
-        server.create('sales', { month: 'June', China: 50, USA: 15, UK: 50 });
-        server.create('sales', { month: 'July', China: 30, USA: 35, UK: 15 });
-        server.create('sales', { month: 'August', China: 20, USA: 40, UK: 30 });
+        server.create('sale', { month: 'January', China: 20, USA: 40, UK: 70 });
+        server.create('sale', { month: 'February', China: 40, USA: 30, UK: 10 });
+        server.create('sale', { month: 'March', China: 15, USA: 20, UK: 30 });
+        server.create('sale', { month: 'April', China: 35, USA: 10, UK: 40 });
+        server.create('sale', { month: 'May', China: 25, USA: 50, UK: 25 });
+        server.create('sale', { month: 'June', China: 50, USA: 15, UK: 50 });
+        server.create('sale', { month: 'July', China: 30, USA: 35, UK: 15 });
+        server.create('sale', { month: 'August', China: 20, USA: 40, UK: 30 });
 
         server.create('update', { weeklySales: { value: 15000, change: 60 }, weeklyOrders: { value: 456334, change: -10 }, visitorsOnline: { value: 955741, change: 5 } });
 
