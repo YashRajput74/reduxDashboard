@@ -1,9 +1,9 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 export const fetchToDos = createAsyncThunk(
-    'todos/fetchToDos',
+    'toDos/fetchToDos',
     async (todo) => {
-        const res = await fetch(``);
+        const res = await fetch(`/api/todos`);
         return await res.json();
     }
 )
@@ -15,7 +15,7 @@ const toDoSlice = createSlice({
         status: 'idle',
         error: null
     },
-    reducers: {},
+    reducers: {},//we use this to change synchronus states
     extraReducers: (builder) => {
         builder
             .addCase(fetchToDos.pending, (state) => {
