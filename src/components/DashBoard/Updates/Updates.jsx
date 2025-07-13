@@ -1,17 +1,20 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux"
-import fetchUpdates from "../../features/dashboard/updates/updatesSlice";
+import { fetchUpdates } from "../../../features/dashboard/updates/updatesSlice";
+import './Updates.css';
 
 export default function Updates() {
     const dispatch = useDispatch();
-    const { weeklySales, weeklyOrders, visitorsOnline, status, error } = useSelector((state) => state.updates);
+    const { updates, status, error } = useSelector((state) => state.updates);
+    const { weeklySales, weeklyOrders, visitorsOnline } = updates;
 
-    useEffect(()=>{
+
+    useEffect(() => {
         dispatch(fetchUpdates());
-    },[dispatch])
+    }, [dispatch])
 
-    if (status === 'loading') {
-        return <div>Loading Updates...</div>
+    if (status === 'loading' || !weeklySales || !weeklyOrders || !visitorsOnline) {
+        return <div>Loading Updates...</div>;
     }
 
     if (status === 'failed') {

@@ -1,8 +1,8 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
-const fetchUpdates = createAsyncThunk(
+export const fetchUpdates = createAsyncThunk(
     'updates/fetchUpdates',
-    async (update) => {
+    async () => {
         const res = await fetch(`/api/updates`);
         return await res.json();
     }
@@ -27,7 +27,7 @@ const updateSlice = createSlice({
             })
             .addCase(fetchUpdates.fulfilled, (state, action) => {
                 state.status = 'succeeded';
-                state.updates = action.payload;
+                state.updates = action.payload.updates[0];
             })
             .addCase(fetchUpdates.rejected, (state, action) => {
                 state.status = 'failed';

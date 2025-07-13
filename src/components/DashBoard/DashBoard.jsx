@@ -1,9 +1,9 @@
 import Projects from "./Projects";
-import Sales from "./sales";
+import Sales from "./Sales/Sales";
 import Tickets from "./Tickets";
 import ToDoList from "./ToDoList";
 import TrafficSources from "./trafficSources";
-import Updates from "./updates";
+import Updates from "./Updates/Updates";
 
 export default function DashBoard() {
     return (
