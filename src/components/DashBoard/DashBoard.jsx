@@ -2,7 +2,7 @@ import Projects from "./Projects";
 import Sales from "./Sales/Sales";
 import Tickets from "./Tickets";
 import ToDoList from "./ToDoList";
-import TrafficSources from "./trafficSources";
+import TrafficSources from "./TrafficSources/TrafficSources";
 import Updates from "./Updates/Updates";
 
 export default function DashBoard() {
@@ -10,9 +10,9 @@ export default function DashBoard() {
         <div id="dashboard-container">
             <Updates />
             <div>
-                {/* <Sales />
+                <Sales />
                 <TrafficSources />
-                <Tickets />
+                {/* <Tickets />
                 <Projects />
                 <ToDoList /> */}
             </div>

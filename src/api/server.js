@@ -41,11 +41,10 @@ createServer({
 
         server.create('update', { weeklySales: { value: 15000, change: 60 }, weeklyOrders: { value: 456334, change: -10 }, visitorsOnline: { value: 955741, change: 5 } });
 
-        server.create('traffic', {
-            'Search Engines': 30,
-            'Direct Click': 30,
-            'Bookmarks Click': 40
-        });
+        server.create('traffic', { source: 'Search Engines', value: 30 });
+        server.create('traffic', { source: 'Direct Click', value: 30 });
+        server.create('traffic', { source: 'Bookmarks Click', value: 40 });
+
     },
 
     routes() {
@@ -72,7 +71,7 @@ createServer({
         });
 
         this.get('/traffic', (schema) => {
-            return schema.traffic.all();
+            return schema.traffics.all();
         });
 
         this.post('/todos', (schema, request) => {

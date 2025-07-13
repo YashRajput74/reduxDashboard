@@ -1,9 +1,17 @@
-
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
+import { fetchSales } from '../../../features/dashboard/sales/salesSlice';
+import { useEffect } from 'react';
 import './Sales.css';
 
 export default function Sales() {
-    const salesData = useSelector((state) => state.sales.data);
+    const dispatch = useDispatch();
+    const salesData = useSelector((state) => state.sales.salesData);
+
+    useEffect(()=>{
+        dispatch(fetchSales());
+    },[dispatch])
+
     return (
         <div>
             <ResponsiveContainer width="100%" height={400}>
@@ -16,7 +24,7 @@ export default function Sales() {
                     <YAxis />
                     <Tooltip />
                     <Legend />
-                    <Bar dataKey="US" fill="#8884d8" />
+                    <Bar dataKey="USA" fill="#8884d8" />
                     <Bar dataKey="UK" fill="#82ca9d" />
                     <Bar dataKey="China" fill="#ffc658" />
                 </BarChart>
