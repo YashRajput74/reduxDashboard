@@ -3,12 +3,14 @@ import Header from "../components/Header";
 import Sidebar from "../components/SideBar";
 import './Homepage.css'
 
-export default function HomePage(){
+export default function HomePage() {
     return (
         <div id="homePage">
             <Header />
-            <Sidebar />
-            <DashBoard />
+            <div id="mainBoard">
+                <Sidebar />
+                <DashBoard />
+            </div>
         </div>
     )
 }

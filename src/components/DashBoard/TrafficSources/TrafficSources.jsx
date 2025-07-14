@@ -24,7 +24,7 @@ export default function TrafficSources() {
         return <div>Error: {error}</div>
     }
 
-    const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
+    const COLORS = ['#36D7E8', '#06B99D', '#FE7096'];
 
     return (
         <div>
@@ -32,12 +32,11 @@ export default function TrafficSources() {
             <PieChart width={400} height={400}>
                 <Pie
                     data={trafficData}
-                    cx="50%"
-                    cy="50%"
+                    cx="20%"
+                    cy="40%"
                     innerRadius={70}
                     outerRadius={120}
                     fill="#8884d8"
-                    paddingAngle={5}
                     dataKey="value"
                     nameKey="source"
                     label
@@ -47,7 +46,9 @@ export default function TrafficSources() {
                     ))}
                 </Pie>
                 <Tooltip />
-                <Legend verticalAlign="bottom" height={36} />
+                <Legend layout="vertical"
+                    align="left"
+                    iconType="circle" />
             </PieChart>
         </div>
     )

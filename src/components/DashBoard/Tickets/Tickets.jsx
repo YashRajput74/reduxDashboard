@@ -22,7 +22,7 @@ export default function Tickets() {
     }
 
     return (
-        <div>
+        <div className='tickets-container'>
             <h4>Recent Tickets</h4>
             <table id="ticketTable">
                 <thead>
@@ -41,11 +41,11 @@ export default function Tickets() {
                                 <td>{entry.assignee}</td>
                                 <td>{entry.subject}</td>
                                 <td><p style={{
-                                    backgroundColor:
-                                        entry.status === 'Done' ? 'green' :
-                                            entry.status === 'Progress' ? 'yellow' :
-                                                entry.status === 'on hold' ? 'blue' :
-                                                    entry.status === 'rejected' ? 'red' :
+                                    background:
+                                        entry.status === 'Done' ? 'linear-gradient(to right, #84d9d2, #07cdae)' :
+                                            entry.status === 'Progress' ? 'linear-gradient(to right, #f6e384, #ffd500)' :
+                                                entry.status === 'on hold' ? 'linear-gradient(to right, #90caf9, #047edf 99%)' :
+                                                    entry.status === 'rejected' ? 'linear-gradient(to right, #ffbf96, #fe7096)' :
                                                         'transparent',
                                     color: 'white',
                                     padding: '4px 8px',

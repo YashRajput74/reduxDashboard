@@ -23,21 +23,21 @@ export default function Updates() {
 
     return (
         <div id="updates">
-            <div>
+            <div className="weekly-sales">
                 <h3>Weekly Sales</h3>
-                <p>{weeklySales?.value || 'N/A'}</p>
+                <p>${weeklySales?.value || 'N/A'}</p>
                 <p>
                     {weeklySales?.change > 0 ? `Increased by ${weeklySales.change}%` : `Decreased by ${weeklySales.change}%`}
                 </p>
             </div>
-            <div>
+            <div className="weekly-orders">
                 <h3>Weekly Orders</h3>
                 <p>{weeklyOrders?.value || 'N/A'}</p>
                 <p>
                     {weeklyOrders?.change > 0 ? `Increased by ${weeklyOrders.change}%` : `Decreased by ${weeklyOrders.change}%`}
                 </p>
             </div>
-            <div>
+            <div className="visitors-online">
                 <h3>Visitors Online</h3>
                 <p>{visitorsOnline?.value || 'N/A'}</p>
                 <p>

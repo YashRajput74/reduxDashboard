@@ -47,14 +47,14 @@ export default function ToDoList() {
     return (
         <div>
             <h4>Todo List</h4>
-            <div>
+            <div className="ToDoInputWrapper">
                 <input type="text" placeholder="What do you need to do today?" value={toDo} onChange={textFunction} />
                 <button onClick={handleAdd}>Add</button>
             </div>
             <div>
                 {ToDoList.map((listItem) => {
                     return (
-                        <div key={listItem.id}>
+                        <div className="todo-item" key={listItem.id}>
                             <input type="checkbox" checked={listItem.completed} onChange={()=>handleToggle(listItem.id)}/>
                             <p style={{ textDecoration: listItem.completed ? 'line-through' : 'none' }}>{listItem.title}</p>
                             <button onClick={() => handleDelete(listItem.id)}>x</button>

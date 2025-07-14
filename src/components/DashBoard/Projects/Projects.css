@@ -1,0 +1,38 @@
+#projectsTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Roboto', sans-serif;
+}
+
+#projectsTable th,
+#projectsTable td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-size: 0.9rem;
+    color: black;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+#projectsTable th {
+    color: black;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+progress {
+    width: 100px;
+    height: 8px;
+    border-radius: 4px;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+progress::-webkit-progress-bar {
+    background-color: #e9ecef;
+    border-radius: 4px;
+}
+
+progress::-webkit-progress-value {
+    background-color: currentColor;
+    border-radius: 4px;
+}

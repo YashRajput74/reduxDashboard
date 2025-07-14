@@ -1,0 +1,70 @@
+h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #3e4a59;
+}
+
+.ToDoInputWrapper {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.ToDoInputWrapper input {
+    flex: 1;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    border: 1px solid #d4d4d4;
+    font-size: 0.9rem;
+}
+
+.ToDoInputWrapper button {
+    padding: 0.6rem 1.5rem;
+    background: linear-gradient(to right, #da8cff, #9a55ff);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0.75rem 0;
+}
+
+.todo-item input[type="checkbox"] {
+    accent-color: #da8cff;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.todo-item p {
+    flex: 1;
+    margin-left: 1rem;
+    font-size: 0.95rem;
+    color: #3e4a59;
+}
+
+.todo-item p.completed {
+    text-decoration: line-through;
+    color: #a5a5a5;
+}
+
+.todo-item button {
+    width: 20px;
+    aspect-ratio: 1;
+    background: none;
+    border: 2px solid #b66dff;
+    padding: 2px;
+    border-radius: 50%;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #b66dff;
+    cursor: pointer;
+    padding-bottom: 3.5px;
+}

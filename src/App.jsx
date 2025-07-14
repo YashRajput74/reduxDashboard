@@ -7,11 +7,3 @@ export default function App(){
         </div>
     )
 }
-
-
-/* 
-create slices: 10 slice
-miragejs
-individual components of slices: no css
-components with css
-*/

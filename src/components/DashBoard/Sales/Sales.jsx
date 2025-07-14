@@ -8,25 +8,26 @@ export default function Sales() {
     const dispatch = useDispatch();
     const salesData = useSelector((state) => state.sales.salesData);
 
-    useEffect(()=>{
+    useEffect(() => {
         dispatch(fetchSales());
-    },[dispatch])
+    }, [dispatch])
 
     return (
         <div>
+            <h3 className="chart-title">Visit and Sales Statistics</h3>
             <ResponsiveContainer width="100%" height={400}>
                 <BarChart
                     data={salesData}
-                    margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
+                    margin={{ top: 0, right: 30, left: 20, bottom: 5 }}
+                    barCategoryGap="30%"
+                    barGap={4}
                 >
-                    <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="month" />
-                    <YAxis />
                     <Tooltip />
-                    <Legend />
-                    <Bar dataKey="USA" fill="#8884d8" />
-                    <Bar dataKey="UK" fill="#82ca9d" />
-                    <Bar dataKey="China" fill="#ffc658" />
+                    <Legend  iconType="circle"/>
+                    <Bar dataKey="China" fill="#DA8CFF" />
+                    <Bar dataKey="USA" fill="#FFBF96" />
+                    <Bar dataKey="UK" fill="#36D7E8" />
                 </BarChart>
             </ResponsiveContainer>
         </div>
