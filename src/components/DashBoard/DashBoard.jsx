@@ -1,6 +1,6 @@
-import Projects from "./Projects";
+import Projects from "./Projects/Projects";
 import Sales from "./Sales/Sales";
-import Tickets from "./Tickets";
+import Tickets from "./Tickets/Tickets";
 import ToDoList from "./ToDoList";
 import TrafficSources from "./TrafficSources/TrafficSources";
 import Updates from "./Updates/Updates";
@@ -12,9 +12,9 @@ export default function DashBoard() {
             <div>
                 <Sales />
                 <TrafficSources />
-                {/* <Tickets />
+                <Tickets />
                 <Projects />
-                <ToDoList /> */}
+                {/* <ToDoList /> */}
             </div>
         </div>
     )

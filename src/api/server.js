@@ -21,7 +21,7 @@ createServer({
         server.create('ticket', { id: 'WD-12345', subject: 'Fund is not recieved', status: 'Done', lastUpdated: 'Dec 5, 2017', assignee: 'David Grey' });
         server.create('ticket', { id: 'WD-12346', subject: 'High loading time', status: 'Progress', lastUpdated: '	Dec 12, 2017', assignee: ' Stella Johnson' });
         server.create('ticket', { id: 'WD-12347', subject: 'Website down for one week', status: 'on hold', lastUpdated: 'Dec 16, 2017', assignee: 'Marina Michel' });
-        server.create('ticket', { id: 'WD-12348', subject: 'Loosing control on server', status: 'rejected', lastUpdated: '2025-07-06T08:30:00Z', assignee: 'John Doe' });
+        server.create('ticket', { id: 'WD-12348', subject: 'Loosing control on server', status: 'rejected', lastUpdated: 'Dec 03, 2017', assignee: 'John Doe' });
 
         server.create('project', { id: 'PRJ-001', name: 'Herman Beck', dueDate: 'May 15, 2015', progress: 30 });
         server.create('project', { id: 'PRJ-002', name: 'Messsy Adam', dueDate: 'Jul 1, 2015', progress: 60 });

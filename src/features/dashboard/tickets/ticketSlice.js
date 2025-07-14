@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
-const fetchTickets = createAsyncThunk(
+export const fetchTickets = createAsyncThunk(
     'tickets/fetchTickets',
     async (tickets) => {
         const res = await fetch(`/api/tickets`);
@@ -23,7 +23,7 @@ const ticketSlice = createSlice({
             })
             .addCase(fetchTickets.fulfilled, (state, action) => {
                 state.status = 'succeeded';
-                state.list = action.payload;
+                state.list = action.payload.tickets;
             })
             .addCase(fetchTickets.rejected, (state, action) => {
                 state.status = 'failed';
