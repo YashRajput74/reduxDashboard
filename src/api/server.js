@@ -11,12 +11,12 @@ createServer({
     },
 
     seeds(server) {
-        server.create('todo', { id: '1', title: 'Pick up kids from school', completed: false });
-        server.create('todo', { id: '2', title: 'Prepare for presentation', completed: true });
-        server.create('todo', { id: '3', title: 'Print statements', completed: false });
-        server.create('todo', { id: '4', title: 'Create invoice', completed: false });
-        server.create('todo', { id: '5', title: 'Call John', completed: true });
-        server.create('todo', { id: '6', title: 'Meeting with Alice', completed: false });
+        server.create('todo', { id: 'todo-1', title: 'Pick up kids from school', completed: false });
+        server.create('todo', { id: 'todo-2', title: 'Prepare for presentation', completed: true });
+        server.create('todo', { id: 'todo-3', title: 'Print statements', completed: false });
+        server.create('todo', { id: 'todo-4', title: 'Create invoice', completed: false });
+        server.create('todo', { id: 'todo-5', title: 'Call John', completed: true });
+        server.create('todo', { id: 'todo-6', title: 'Meeting with Alice', completed: false });
 
         server.create('ticket', { id: 'WD-12345', subject: 'Fund is not recieved', status: 'Done', lastUpdated: 'Dec 5, 2017', assignee: 'David Grey' });
         server.create('ticket', { id: 'WD-12346', subject: 'High loading time', status: 'Progress', lastUpdated: '	Dec 12, 2017', assignee: ' Stella Johnson' });
@@ -74,9 +74,16 @@ createServer({
             return schema.traffics.all();
         });
 
+        this.get('/todos/:id', (schema, request) => {
+            let id = request.params.id;
+            let todo = schema.todos.find(id);
+            return todo.attrs;
+        });
+
         this.post('/todos', (schema, request) => {
             let attrs = JSON.parse(request.requestBody);
-            return schema.todos.create(attrs);
+            let newTodo = schema.todos.create(attrs);
+            return newTodo.attrs;
         });
 
         this.delete('/todos/:id', (schema, request) => {
@@ -90,7 +97,7 @@ createServer({
             let todo = schema.todos.find(id);
             let attrs = JSON.parse(request.requestBody);
             todo.update(attrs);
-            return todo;
+            return todo.attrs;
         });
     }
 });

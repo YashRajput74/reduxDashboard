@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 export const fetchProjects = createAsyncThunk(
     'projects/fetchProjects',
-    async (project) => {
+    async () => {
         const res = await fetch(`/api/projects`);
         return await res.json();
     }
