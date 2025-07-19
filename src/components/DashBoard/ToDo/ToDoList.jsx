@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
-// import { fetchToDos, addToDo, toggleToDoStatus, deleteToDo } from '../../../features/toDo/toDoSlice';
+import { fetchToDos, addToDo, toggleToDoStatus, deleteToDo } from "../../../features/dashboard/todo/todoSlice"
 import './ToDoList.css';
 
 export default function ToDoList() {
