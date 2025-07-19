@@ -1,13 +1,11 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
-import { fetchToDos, addToDo, toggleToDoStatus, deleteToDo } from '../../../features/toDo/toDoSlice';
+// import { fetchToDos, addToDo, toggleToDoStatus, deleteToDo } from '../../../features/toDo/toDoSlice';
 import './ToDoList.css';
 
 export default function ToDoList() {
     const dispatch = useDispatch();
-    const ToDoList = useSelector((state) => state.toDos.data);
-    const status = useSelector((state) => state.toDos.status);
-    const error = useSelector((state) => state.toDos.error);
+    const { data: ToDoList, status, error } = useSelector((state) => state.toDos);
     const [toDo, setToDo] = useState('');
 
     function textFunction(e) {
@@ -24,11 +22,11 @@ export default function ToDoList() {
         setToDo('');
     }
 
-    function handleToggle(todoId){
+    function handleToggle(todoId) {
         dispatch(toggleToDoStatus(todoId));
     }
 
-    function handleDelete(todoId){
+    function handleDelete(todoId) {
         dispatch(deleteToDo(todoId))
     }
 
@@ -55,7 +53,7 @@ export default function ToDoList() {
                 {ToDoList.map((listItem) => {
                     return (
                         <div className="todo-item" key={listItem.id}>
-                            <input type="checkbox" checked={listItem.completed} onChange={()=>handleToggle(listItem.id)}/>
+                            <input type="checkbox" checked={listItem.completed} onChange={() => handleToggle(listItem.id)} />
                             <p style={{ textDecoration: listItem.completed ? 'line-through' : 'none' }}>{listItem.title}</p>
                             <button onClick={() => handleDelete(listItem.id)}>x</button>
                         </div>
