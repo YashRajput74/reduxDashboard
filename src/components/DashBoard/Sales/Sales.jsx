@@ -2,7 +2,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 import { fetchSales } from '../../../features/dashboard/sales/salesSlice';
 import { useEffect } from 'react';
-import './Sales.css';
 
 export default function Sales() {
     const dispatch = useDispatch();

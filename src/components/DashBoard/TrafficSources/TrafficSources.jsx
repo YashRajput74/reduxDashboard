@@ -1,7 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchTrafficSlice } from '../../../features/dashboard/traffic/trafficSlice';
-import './TrafficSources.css';
 import { Cell, Legend, Pie, PieChart, Tooltip } from 'recharts';
 
 export default function TrafficSources() {

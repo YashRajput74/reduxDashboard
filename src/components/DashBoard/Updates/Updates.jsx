@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux"
 import { fetchUpdates } from "../../../features/dashboard/updates/updatesSlice";
-import './Updates.css';
 
 export default function Updates() {
     const dispatch = useDispatch();

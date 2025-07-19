@@ -6,6 +6,7 @@ import TrafficSources from "./TrafficSources/TrafficSources";
 import Updates from "./Updates/Updates";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouse, faCircleExclamation } from '@fortawesome/free-solid-svg-icons';
+import './Dashboard.css';
 
 export default function DashBoard() {
     return (

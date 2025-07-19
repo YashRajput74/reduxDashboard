@@ -5,6 +5,10 @@
     font-family: 'Roboto', 'Helvetica Neue', sans-serif;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 #homePage {
     width: 100%;
 }
