@@ -50,7 +50,7 @@ A professional-grade **dashboard application** built with **React**, **Redux**, 
 
 
 ## 📸 Live Demo: 
-🔗 [Live Site](https://67f00369d84eae0008de7ceb--stickynotesa.netlify.app/)
+🔗 [Live Site](https://687ae9dfb492fecfd7647b4b--dashboardredux.netlify.app/)
 
 ## 🧠 Future Improvements
 - Implement real backend instead of mock server
